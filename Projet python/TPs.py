@@ -300,7 +300,7 @@ for  i,doc in enumerate(collection) :
 
 score=dict(sorted(score.items(),key=lambda item:item[1],
 reverse=True))
-score
+print(score)
 
 # =============== TD 9-10 : comparaison de corpus =====================
 
