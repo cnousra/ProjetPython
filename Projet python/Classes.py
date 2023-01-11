@@ -33,3 +33,33 @@ class Author:
         self.production.append(production)
     def __str__(self):
         return f"Auteur : {self.name}\t# productions : {self.ndoc}"
+    
+class RedditDocument(Document):
+    
+    def __init__(self,nb_comment="",titre="", auteur="", date="", url="", texte=""):
+        super.__init__(titre="", auteur="", date="", url="", texte="")
+        self.nb_comment=nb_comment
+        
+    def get_nb_comment(self):
+        return self.nb_comment
+
+    def set_nb_comment(self, nb_comment):
+        self.nb_comment = nb_comment 
+        
+    def __str__(self):
+        super.__str__(self)
+        
+class ArxivDocument(Document):
+    def __init__(self,coAuthors,titre="", auteur="", date="", url="", texte=""):
+        super.__init__(titre="", auteur="", date="", url="", texte="")
+        self.coAuthors=coAuthors
+        
+        def get_coAthors(self):
+            return self.coAuthors
+
+        def set_coAthors(self, nb_comment):
+            self.coAuthors = coAuthors 
+            
+        def __str__(self):
+            super.__str__(self)
+        
